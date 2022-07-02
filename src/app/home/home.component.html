@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<!-- <link rel="stylesheet" href="style/homestyle.css"> -->
+	</head>
+<body>
+	<div style="height:20%;width: auto;">
+		<div style="float:left;height:100%;width:80%">
+				<img class="center" src="assets/images/home-top.jpg" >
+		</div>
+	</div>
+	<div style="background-color:light yellow ;height:8%;width:100%"><!-- marquee div-->
+		<marquee behavior="alternate" width="100%" height=100px ><font face="chiller" color="red" size=4><h2>Designed  By Team 8</h2></font></marquee>
+	</div>
+	<div style="width:100%;height:10%;background-color:rgb(198,255,179,0) ;" class="nav">
+<li style="margin-left:27%;margin-top:18px;"><a href="home.jsp">Home</a></li>
+<li style="margin-left:0.40%;margin-top:18px;">Student Login
+	<ul>
+		<li><a href="Student_login.jsp">Login </a></li>
+		<li><a href="student_registration.jsp">Registration</a></li>
+		
+	</ul>
+</li>
+
+<li style="margin-top:18px;margin-left:0.30%">Institutes
+	<ul>
+		<li><a href="">Institute Login</a></li>
+	
+		<li><a href="">Inst.Registration</a></li>
+	</ul>
+</li>
+<li style="margin-left:0.25%;margin-top:18px;">
+		<a href="">ministry</a>
+</li>
+<li style="margin-left:0.40%;margin-top:18px;">About Us
+	<ul>
+	<li><a href="aboutUs.html">About Us</a></li>
+	<li><a href="">State</a></li>
+	</ul>
+	</li>
+<li style="margin-top:18px;margin-left:0.25%;">Contact Us
+	<ul>
+		<li><a href="contact.pdf" target="blank">ContactDetails</a></li>
+		<li><a href="helpline.html">Helpline</a></li>
+	</ul>
+</li>
+
+	
+	<br>
+	<div style="height:98.3%;width:35%;float:left;">
+		<div style="border-radius: 10%">
+				<br><br><p> 
+				<fieldset class=myfield style="border-radius:10%;background-color:#ff50e8;outline:5px groove #f2ff02;">
+					<br><p>
+						
+							<font color= "yellow" size=4 face="Lucida Handwriting" >Nodal Officer Login</font>
+						<br><p>
+							<font style="margin-left:10px;"size="4" color=yellow face="Lucida Handwriting">Officer Id    : </font>
+							<input type="text" name="t1" size=30><br><br>
+							<font style="margin-left:10px;"size="4" color="yellow" face="Lucida Handwriting">Password    : </font>
+							<input type="password" name="t2" size=30>
+							<br><br>
+							<input type="submit" class="mybutton" name="submit" value="submit">
+							<input type="submit" class="mybutton" name="forgot_password" value="forgot password">				
+				</fieldset> 
+		</div>
+	</div>
+	<!--			
+					if(request.getParameter("submit")!=null)
+					{	
+						String n,p;
+						Connection con=null;
+						n=request.getParameter("t1");
+						p=request.getParameter("t2");
+						try
+						{
+							
+							Class.forName("oracle.jdbc.driver.OracleDriver");
+							con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XE","scholar","rider");
+							PreparedStatement ps=con.prepareStatement("select * from admin where NAME=? AND PASS=?");
+							ps.setString(1,n);
+							ps.setString(2,p);
+							ResultSet res=ps.executeQuery();
+							
+							if(!res.next())
+							{
+							%>
+							<script language="JavaScript">
+								alert("Incorrect Admin Id and Password!");
+							</script>
+							<%
+							}
+							else
+							{
+							%>
+								<jsp:forward page="adminControl.jsp" />
+							<%
+							}
+					   }
+					   catch(Exception e)
+					   {
+						   e.printStackTrace();
+					   }
+				   }
+					%>
+-->
+
+
+
